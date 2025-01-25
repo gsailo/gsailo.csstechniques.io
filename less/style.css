@@ -78,23 +78,23 @@ a {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 30px;
   min-height: 300px;
   background-color: #594896;
   color: black;
 }
 .content .box {
-  width: 100%;
-  height: 300px;
-  border-radius: 8px;
+  width: auto;
+  height: auto;
   background-color: #aaabfd;
   color: black;
+  display: flex;
 }
 .content .box .imgBox {
   border: 3px white solid;
   border-radius: 10px;
-  width: 90%;
-  max-width: 100%;
+  width: auto;
+  
 }
 footer {
   width: 100%;
@@ -117,7 +117,43 @@ footer .copyright {
 
 @media (max-width: 800px) {
   .content {
+    display: flex;
     flex-direction: column;
-    flex: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center; 
+  }
+
+  .content .box {
+    width: auto;  
+    height: auto;
+    background-color: #aaabfd;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center; 
+  }
+
+  .content .box .imgBox {
+    text-align: center;
+  }
+
+  .content .box .imgBox img {
+    max-width: 100%; 
+    height: auto;
+    margin: 0 auto;  
+  }
+
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+  }
+
+  .full {
+    padding: 30px 20px;
   }
 }
